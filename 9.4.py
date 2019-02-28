@@ -1,4 +1,4 @@
-name = raw_input("Enter file:")
+name = input("Enter file:")
 if len(name) < 1 : name = "mbox-short.txt"
 name = "mbox-short.txt"
 handle = open(name)
@@ -18,12 +18,10 @@ for word in words:
            counts[word] = counts.get(word, 0) + 1 
 
         
-maxval = None
-maxkey = None
+maxValue = maxkey = None
 for key,val in counts.items() :
-#   if maxval == None : maxval = val
-  if val > maxval:
-      maxval = val
+  if val > maxValue:
+      maxValue = val
       maxkey = key   
 
-print(maxkey, maxval)
+print(maxkey, maxValue)
